@@ -13217,6 +13217,8 @@ iIiIiIiekQ5QRERERET0jP8BwzYD70qnB74AAAAASUVORK5CYII=
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Graph with max_depth = 3.
 Training curve stabilizes as more training points are added. Test curve also stabilizes as more training data is added. I'm picking this graph(max_depth=3) over max_depth=6 because testing score is maximized and is more closer to score of training data.
+As training data increases starting with 50 training points, we can see that training score decreases slightly but then stabilizes at the point of convergence with testing score. The fact that the training score decreases slightly and doesn't give exact score is a good thing and is an indication that there is no over fitting or under fitting of the data. The amount of decrease in score between 0 and 100 points is more than the slight decrease noticed from this point forward. This is probably a case of under fitting (upto 100 data points).
+On the other hand, testing score improves with increase in data points. There is a rapid increase between 0 and 100 data points indicating again this range is a case of under fitting and thus the model is getting benefits from adding more data points until the point of convergence with training score curve. Idea is to maximize training and testing score but with optimal max_depth and data points (no over fitting or under fitting).
 Adding more training points will not benefit the model since both training and testing curve have already seems to have stabilized. From the graph, it looks like adding data beyond 300 points doesn't improve the performance of the model any further. So we may probably stop adding more data at this point itself.</p>
 
 </div>
